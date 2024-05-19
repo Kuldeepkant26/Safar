@@ -1,0 +1,253 @@
+.product-details {
+  width: 85%;
+  margin: 1rem auto;
+  overflow-x: hidden;
+  display: flex;
+  background-color: #F8F9FA;
+  padding: 2rem;
+  gap: 1rem;
+  height: 67vh;
+}
+
+.product-details img {
+  width: 40%;
+  object-fit: cover;
+
+}
+
+.product-details .show-right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: 1rem;
+}
+
+@media (min-width:750px) {
+
+
+  .product-details .show-right::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the vertical scrollbar */
+    height: 10px;
+    /* Height of the horizontal scrollbar */
+  }
+
+  .product-details .show-right::-webkit-scrollbar-track {
+    background-color: #d2d0d0;
+    /* Color of the scrollbar track */
+    border-radius: 10px;
+    /* Optional: rounded corners for the track */
+  }
+
+  .product-details .show-right::-webkit-scrollbar-thumb {
+    background-color: black;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Optional: rounded corners for the thumb */
+  }
+
+  .product-details .show-right::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
+    /* Color of the thumb when hovered */
+  }
+
+  .product-details .show-right::-webkit-scrollbar-thumb:active {
+    background-color: #333;
+    /* Color of the thumb when clicked */
+  }
+
+}
+
+.product-details .show-right .location i {
+  color: rgb(94, 119, 188);
+}
+
+.show-right .btns {
+  border: 1px solid salmon;
+  display: flex;
+  flex-direction: column;
+  gap: 0.61rem;
+}
+
+.show-right .btns button {
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 0.81rem;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+}
+
+.show-right .btns .lw {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.show-right .btns .lw a {
+  width: 49%;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.show-right form {
+  border: 1px solid salmon;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.show-right form .comment {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+}
+
+.show-right form .comment {
+  border: none;
+  outline: none;
+  border-bottom: 1.5px solid black;
+  width: 50%;
+}
+
+
+
+.show-right form button {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 15rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.reviews {
+  border: 1px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+
+.reviews .review {
+  border: 1px solid black;
+  padding: 0.7rem;
+  position: relative;
+  min-width: 150px;
+
+  border-radius: 15px;
+  margin: 0.5rem;
+}
+
+.reviews .review a {
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.5rem;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.reviews .review .user {
+
+  font-size: 0.66rem;
+}
+
+.reviews .review .comment {
+
+  font-size: 0.77rem;
+}
+
+@media (max-width:800px) {
+  .product-details {
+    width: 95%;
+    margin: 1rem auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    background-color: #F8F9FA;
+    padding: 2rem 0.61rem;
+    gap: 1rem;
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  .product-details img {
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  .product-details .show-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 1rem;
+  }
+
+}
+
+#confirm {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  /* Apply backdrop blur effect */
+  -webkit-backdrop-filter: blur(30px);
+  position: fixed;
+  top: 0px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#confirm .box {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  padding: 3vw;
+  gap: 1rem;
+  border-radius: 20px;
+}
+
+#confirm .box div {
+
+  color: white;
+  text-decoration: none;
+  display: flex;
+  gap: 1rem;
+}
+
+#confirm .box div a {
+
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.3s;
+}
+
+#confirm .box div a:hover {
+  color: rgba(255, 255, 255, 0.777);
+  transform: scale(0.9);
+  border-radius: 15px;
+
+}

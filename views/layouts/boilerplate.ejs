@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/addform.css">
+    <link rel="stylesheet" href="/css/rating.css">
+    <link rel="stylesheet" href="/css/show.css">
+    <link rel="stylesheet" href="/css/login_signup.css">
+    <link rel="stylesheet" href="/css/edit.css">
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            overflow-x: hidden;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            padding-top: 6rem;
+            overflow-y: scroll;
+        }
+
+        #success-message {
+            position: absolute;
+            top: 120px;
+            right: 0px;
+            background-color: black;
+            color: white;
+            z-index: 10000;
+            padding: 0.5rem 2rem;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('../includes/nav.ejs') %>
+        <div id="login" class="loginSignup">
+            <form action="/login" method="post" autocomplete="off">
+                <div class="lup">
+                    <h1>Welcome back to Safar</h1>
+                    <i class="ri-close-line" id="lcancel"></i>
+                </div>
+                <input type="text" placeholder="Enter username" autocomplete="off" name="username">
+                <input type="password" placeholder="Enter password" autocomplete="off" name="password">
+                <div class="lbtns">
+                    <button type="submit">Login</button>
+                    <button type="button" class="signupBtns">New user?</button>
+                </div>
+            </form>
+        </div>
+        <div id="signup" class="loginSignup">
+            <form action="/signup" method="post" autocomplete="off">
+                <div class="lup">
+                    <h1>Welcome to Safar</h1>
+                    <i class="ri-close-line" id="Scancel"></i>
+                </div>
+                <input type="text" placeholder="Enter username" autocomplete="off" name="username" required>
+                <input type="email" placeholder="Enter email" autocomplete="off" name="email" required>
+                <input type="password" placeholder="Enter password" autocomplete="current-password" name="password" required>
+                <div class="lbtns">
+                    <button type="submit">SignUp</button>
+                    <button type="button" class="loginBtns">Existing user?</button>
+                </div>
+            </form>
+        </div>
+        <% if(success && success.length || error && error.length){ %>
+            <div id="success-message" class="success-message">
+                <%= success %>
+                <%= error %>
+            </div>
+            <% } %>
+                <%- body %>
+                    <script src="/js/loginSignup.js"></script>
+                    <script src="/js/nav.js"></script>
+                    <script> document.addEventListener("DOMContentLoaded", function () {
+                            const successMessage = document.getElementById('success-message');
+                            if (successMessage) {
+                                setTimeout(() => {
+                                    successMessage.style.display = 'none';
+                                }, 3000); // 4 seconds, adjust as needed
+                            }
+                        });</script>
+</body>
+
+</html>

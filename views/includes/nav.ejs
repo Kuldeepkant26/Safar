@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <h2 id="logo">Safar</h2>
+    <div class="menu" id="menu">
+        <a href="/home">Home</a>
+        <a href="/add">Add</a>
+        <% if(!currUser){ %>
+            <a href="#" id="signupBtn" class="signupBtns">SignUp</a>
+            <a href="#" id="loginBtn" class="loginBtns">Login</a>
+            <% } %>
+                <% if(currUser){ %>
+                    <a href="/logout">Logout</a>
+                    <% } %>
+    </div>
+    <i class="ri-menu-line" id="menuBtn"></i>
+</nav>

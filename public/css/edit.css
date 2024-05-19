@@ -1,0 +1,98 @@
+#edit_form {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(26px);
+    /* Apply backdrop blur effect */
+    -webkit-backdrop-filter: blur(30px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+#edit_form form {
+    background-color: rgba(255, 255, 255, 0.677);
+    color: black;
+    padding: 1rem;
+    max-width: 400px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border-radius: 15px;
+    margin-top: 4.4rem;
+}
+
+#edit_form .eup {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#edit_form .eup h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#edit_form .eup #Editcancel {
+    font-size: 34px;
+    cursor: pointer;
+}
+
+#edit_form .eboxes {
+    position: relative;
+
+}
+
+#edit_form .eboxes input {
+    height: 2.1rem;
+    background: none;
+    font-size: 16px;
+}
+
+#edit_form .eboxes h3 {
+    position: absolute;
+    font-size: 12px;
+    top: -15px;
+    right: 5px;
+    z-index: 1000;
+    font-weight: 300;
+}
+
+
+
+#edit_form input[type="text"],
+#edit_form input[type="number"] {
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+#edit_form #ctgry {
+    background: none;
+    color: black;
+    border: none;
+    font-size: 1rem;
+}
+
+
+#edit_form button[type="submit"] {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: all;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+#edit_form button[type="submit"]:active {
+    transform: scale(0.9);
+}

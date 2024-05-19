@@ -1,0 +1,17 @@
+<% layout('../layouts/boilerplate') %>
+    <link rel="stylesheet" href="/css/signupPage.css">
+    <div id="signupPage">
+        <form action="/login" method="post" autocomplete="off">
+            <div class="lup">
+                <h1>Welcome back to Safar</h1>
+                <a href="/home"> <i class="ri-close-line"></i></a>
+            </div>
+            <input type="text" placeholder="Enter username" autocomplete="off" name="username" required>
+            <input type="password" placeholder="Enter password" autocomplete="off" name="password"
+                required>
+            <div class="lbtns">
+                <button type="submit">Login</button>
+                <button type="button" class="signupBtns">New user?</button>
+            </div>
+        </form>
+    </div>

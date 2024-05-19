@@ -1,0 +1,133 @@
+<% layout('../layouts/boilerplate') %>
+
+    <body>
+        <div id="edit_form">
+            <form action="/edit/<%= listing._id %>" method="post" id="eform">
+                <div class="eup">
+                    <h1>Edit information</h1>
+                    <i class="ri-close-line" id="Editcancel"></i>
+                </div>
+                <div class="eboxes">
+                    <input type="text" name="title" placeholder="Enter title" value="<%= listing.title %>">
+                    <h3>Title</h3>
+                </div>
+                <!-- <div class="eboxes">
+                    <input type="text" name="image" placeholder="Paste image link" value="<%= listing.image.url %>" disabled>
+                    <h3>Image</h3>
+                </div> -->
+                <div class="eboxes">
+                    <input type="text" name="desc" placeholder="Enter Description" value="<%= listing.desc %>">
+                    <h3>Description</h3>
+                </div>
+                <div class="eboxes">
+                    <input type="number" name="price" placeholder="Enter Price" value="<%= listing.price %>">
+                    <h3>Price</h3>
+                </div>
+                <div class="eboxes">
+                    <input type="text" name="location" placeholder="Enter Location" value="<%= listing.location %>">
+                    <h3>Location</h3>
+                </div>
+                <div class="eboxes">
+                    <input type="text" name="country" placeholder="Enter Country" value="<%= listing.country %>">
+                    <h3>Country</h3>
+                </div>
+                <div class="eboxes">
+                    <select name="ctgry" id="ctgry">
+                        <option value="Historic" <%=listing.ctgry==='Historic' ? 'selected' : '' %>>Historic</option>
+                        <option value="Beach" <%=listing.ctgry==='Beach' ? 'selected' : '' %>>Beach</option>
+                        <option value="Birthday" <%=listing.ctgry==='Birthday' ? 'selected' : '' %>>Birthday</option>
+                        <option value="Rainy" <%=listing.ctgry==='Rainy' ? 'selected' : '' %>>Rainy</option>
+                    </select>
+                    <h3>Category</h3>
+                </div>
+                <button type="submit" id="saveChanges">Save Changes</button>
+            </form>
+        </div>
+
+        <div id="confirm">
+            <div class="box">
+                <h1>Are you Sure ?</h1>
+                <div>
+                    <a id="deleteCancel">Cancel</a>
+                    <a href="/delete/<%= listing._id %>">Confirm</a>
+                </div>
+            </div>
+        </div>
+        <div class="product-details">
+            <img src="<%= listing.image.url %>" alt="Product Image">
+            <div class="show-right">
+                <h1>
+                    <%= listing.title %>
+                </h1>
+                <hr>
+                <p class="description">
+                    Description: <%= listing.desc %>
+                </p>
+                <p class="location">
+                    <i class="ri-map-pin-line"></i>
+                    <%= listing.country %>,
+                        <%= listing.location %>
+                </p>
+                <p class="category">
+                    category: <%= listing.ctgry %>
+                </p>
+                <p class="owner">Suggested by: <%= listing.owner && listing.owner.username ? listing.owner.username
+                        : 'Kuldeep' %>
+                </p>
+
+                <p class="price">
+                    &#8377;<%= listing.price %>/ night
+                </p>
+                <div class="btns">
+                    <button>Book Now</button>
+                    <% if(currUser &&listing.owner &&currUser.username==listing.owner.username ){ %>
+                        <div class="lw">
+                            <a id="Edit">Edit</a>
+                            <a id="Listing_Delete">Delete</a>
+                        </div>
+                        <% } %>
+                </div>
+
+
+                <form class="reviewForm" method="post" action="/review/<%= listing._id %>">
+                    <fieldset class="starability-slot">
+                        <legend>Leave a review:</legend>
+                        <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked
+                            aria-label="No rating." />
+                        <input type="radio" id="first-rate1" name="rating" value="1" />
+                        <label for="first-rate1" title="Terrible">1 star</label>
+                        <input type="radio" id="first-rate2" name="rating" value="2" />
+                        <label for="first-rate2" title="Not good">2 stars</label>
+                        <input type="radio" id="first-rate3" name="rating" value="3" />
+                        <label for="first-rate3" title="Average">3 stars</label>
+                        <input type="radio" id="first-rate4" name="rating" value="4" />
+                        <label for="first-rate4" title="Very good">4 stars</label>
+                        <input type="radio" id="first-rate5" name="rating" value="5" />
+                        <label for="first-rate5" title="Amazing">5 stars</label>
+                    </fieldset>
+                    <input type="text" name="comment" class="comment" required placeholder="Enter Comment">
+                    <button type="submit">Add Review</button>
+                </form>
+                <div class="reviews">
+                    <% for(review of listing.reviews) {%>
+                        <div class="review">
+                            <p class="user"><i class="ri-user-fill"></i>
+                                <%= review.author.username %>
+                            </p>
+                            <p class="starability-result" data-rating="<%= review.rating %>">
+                                Rated: 3 stars
+                            </p>
+                            </p>
+                            <p>
+                                <%= review.comment %>
+                            </p>
+                            <% if(currUser && review.author.username==currUser.username){ %>
+                                <a href="/delete/<%= listing._id %>/review/<%= review._id %>">Delete</a>
+                                <% } %>
+                        </div>
+                        <% } %>
+                </div>
+            </div>
+        </div>
+        <script src="/js/show.js"></script>
+    </body>

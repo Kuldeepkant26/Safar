@@ -1,0 +1,86 @@
+/* signupPage.css */
+#signupPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 77vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+#signupPage form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+
+#signupPage .lup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#signupPage .lup h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#signupPage .lup a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+}
+
+#signupPage input[type="text"],
+#signupPage input[type="email"],
+#signupPage input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 2px solid #333;
+    box-sizing: border-box;
+}
+
+#signupPage input[type="text"]:focus,
+#signupPage input[type="email"]:focus,
+#signupPage input[type="password"]:focus {
+    outline: none;
+    border-bottom: 2px solid #000;
+}
+
+#signupPage .lbtns {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#signupPage .lbtns button {
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#signupPage .lbtns button:hover {
+    background: #333;
+}
+
+@media (min-width: 768px) {
+    #signupPage {
+        padding: 40px;
+    }
+
+    #signupPage .lbtns {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

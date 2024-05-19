@@ -1,0 +1,214 @@
+nav {
+    width: 100%;
+    height: 2.7rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 7vw;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+nav::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Semi-transparent white background */
+    /* filter: blur(40px); */
+    /* Apply blur effect */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Semi-transparent white background */
+    backdrop-filter: blur(40px);
+    /* Apply backdrop blur effect */
+    -webkit-backdrop-filter: blur(30px);
+    z-index: -1;
+}
+
+#search {
+  border: 1px solid black;
+}
+
+
+@media (max-width:800px) {
+    #search {
+        width: 13.5rem;
+
+        z-index: 100;
+        position: fixed;
+        left: 25.3%;
+        top: 25px;
+        padding: 0.5rem 0.7rem;
+        /* border: 0px; */
+        outline: none;
+        border-radius: 15px;
+    }
+
+    #logo {
+        position: relative;
+        font-weight: 200;
+    }
+
+    #logo::before {
+        content: '';
+        position: absolute;
+        width: 2.2rem;
+        height: 2rem;
+        border-radius: 50%;
+        left: 50%;
+        top: -8px;
+        border-top: 5px solid rgb(255, 255, 255);
+        border-right: 5px solid rgb(255, 255, 255);
+        border-bottom: 5px solid rgb(255, 255, 255);
+    }
+
+    nav {
+        display: flex;
+        padding: 0rem 1rem;
+        height: 5rem;
+    }
+
+    nav #logo {
+        font-size: 1.2rem;
+    }
+
+
+
+    nav .menu {
+        width: fit-content;
+        padding: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 1rem;
+        top: 78px;
+        right: -50%;
+        transition: all;
+        transition-duration: 0.5s;
+        border-bottom-left-radius: 15px;
+        overflow: hidden;
+    }
+
+    nav .menu::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* Semi-transparent white background */
+        /* filter: blur(40px); */
+        /* Apply blur effect */
+        background-color: rgba(255, 255, 255, 0.1);
+        /* Semi-transparent white background */
+        backdrop-filter: blur(40px);
+        /* Apply backdrop blur effect */
+        -webkit-backdrop-filter: blur(30px);
+        z-index: -1;
+    }
+
+    nav .menu a {
+        text-decoration: none;
+        color: black;
+        font-size: 2rem;
+    }
+
+
+    nav i {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+}
+
+@media (min-width:800px) {
+    #logo {
+        position: relative;
+        font-weight: 200;
+    }
+
+
+
+    #search {
+        width: 16rem;
+        z-index: 110;
+        position: fixed;
+        left: 25.3%;
+        top: 30px;
+        padding: 0.7rem 0.9rem;
+        /* border: 0px; */
+        outline: none;
+        border-radius: 15px;
+    }
+
+    #logo::before {
+        content: '';
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 49%;
+        left: 55%;
+        top: -9px;
+        border-top: 5px solid rgb(255, 255, 255);
+        border-right: 5px solid rgb(255, 255, 255);
+        border-bottom: 5px solid rgb(255, 255, 255);
+    }
+
+
+
+
+    nav .menu {
+        display: flex;
+
+        gap: 1rem;
+    }
+
+    /* start */
+    .navbar .menu a {
+        text-decoration: none;
+        color: black;
+        font-weight: 400;
+        font-size: 1rem;
+        position: relative;
+        transition: all;
+        transition-duration: 0.3s;
+        outline: none;
+    }
+
+    .navbar .menu a:hover {
+        transform: translateY(-3px);
+    }
+
+    .navbar .menu a::before {
+        content: '';
+        width: 0%;
+        height: 0px;
+        position: absolute;
+        bottom: 0px;
+        transition: all;
+        transition-duration: 0.3s;
+
+    }
+
+    .navbar .menu a:hover::before {
+        width: 100%;
+        border: 0.5px solid black;
+    }
+
+    nav i {
+        display: none;
+    }
+}
+
+.men {
+
+    right: 0px !important;
+}
