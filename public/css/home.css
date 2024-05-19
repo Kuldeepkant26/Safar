@@ -95,7 +95,7 @@
         flex-wrap: wrap;
         align-items: center;
         padding: 0.2rem;
-        border: 5px solid salmon;
+        
         gap: 3vw;
         justify-content: space-evenly;
     }

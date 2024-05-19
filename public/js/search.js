@@ -39,7 +39,7 @@ function createCard(listing) {
   link.setAttribute('href', `/show/${listing._id}`);
 
   const image = document.createElement('img');
-  image.src = listing.image;
+  image.src = listing.image.url;
   image.alt = 'Product Image';
 
   const cardInfo = document.createElement('div');

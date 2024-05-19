@@ -64,7 +64,7 @@
 }
 
 .show-right .btns {
-  border: 1px solid salmon;
+
   display: flex;
   flex-direction: column;
   gap: 0.61rem;
@@ -99,7 +99,7 @@
 }
 
 .show-right form {
-  border: 1px solid salmon;
+  
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -132,7 +132,7 @@
 }
 
 .reviews {
-  border: 1px solid green;
+ 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

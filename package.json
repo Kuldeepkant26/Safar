@@ -2,7 +2,7 @@
   "engines": {
     "node": "18.17.0"
   },
-  "name": "Safar",
+  "name": "safar",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
