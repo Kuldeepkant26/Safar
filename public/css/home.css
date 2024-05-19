@@ -119,7 +119,7 @@
             flex-wrap: wrap;
             align-items: center;
             padding: 0rem;
-            border: 5px solid salmon;
+            
             gap: 3vw;
             justify-content: space-evenly;
         }
