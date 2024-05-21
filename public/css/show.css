@@ -115,7 +115,9 @@
   border: none;
   outline: none;
   border-bottom: 1.5px solid black;
-  width: 50%;
+  width: 95%;
+  background: none;
+  height: 1.7rem;
 }
 
 

@@ -3,8 +3,8 @@
     max-width: 500px;
     margin: 2rem auto;
     padding: 20px;
-    background-color: black;
-    color: white;
+    background-color: #ECECEC;
+    color: black;
     border-radius: 10px;
   }
   .add .up{
@@ -14,12 +14,12 @@
   }
   .add .up a{
    text-decoration: none;
-   color: white;
+   color: black;
    font-size: 1.6rem;
   }
   .add .up h1{
    text-decoration: none;
-   color: white;
+   color: black;
    font-size: 1.6rem;
   }
   
@@ -30,9 +30,9 @@
     margin-bottom: 10px;
     padding: 8px;
     border: none;
-    border-bottom: 2px solid white; /* Underline effect */
+    border-bottom: 2px solid black; /* Underline effect */
     background-color: transparent;
-    color: white;
+    color: black;
     outline: none;
   }
   
@@ -44,20 +44,21 @@
   
   .add input::placeholder,
   .add select::placeholder {
-    color: white;
+    color: black;
   }
   
   .add select {
     /* Customize select dropdown arrow if needed */
-    color: rgb(193, 143, 143);
+    color: rgb(0, 0, 0);
   }
   
   .add button {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    border-radius: 15px;
   }
   
   .add button:hover {
