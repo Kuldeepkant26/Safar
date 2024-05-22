@@ -83,8 +83,9 @@
     justify-content: center;
     color: rgb(255, 255, 255);
 }
-#location{
-    
+
+#location {
+    color: pink;
 }
 
 .card .location i {
