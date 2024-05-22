@@ -38,7 +38,7 @@ router.post('/add', isLogedIn, upload.single('image'), WrapAsync(async (req, res
 
         title: capitalizeFirstLetter(title),
         price: price,
-        desc: desc,
+        desc: capitalizeFirstLetter(desc),
         location: capitalizeFirstLetter(location),
         country: capitalizeFirstLetter(country),
         ctgry: capitalizeFirstLetter(ctgry)
@@ -51,7 +51,6 @@ router.post('/add', isLogedIn, upload.single('image'), WrapAsync(async (req, res
 }));
 router.get('/show/:id', WrapAsync(async (req, res) => {
     let listing = await Listings.findById(req.params.id).populate({ path: "reviews", populate: { path: "author" } }).populate("owner");
-
     res.render('show.ejs', { listing });
 
 }))
