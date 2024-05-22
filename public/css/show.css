@@ -1,3 +1,9 @@
+#back {
+  margin: 0px;
+  text-decoration: none;
+  color: black;
+}
+
 .product-details {
   width: 85%;
   margin: 1rem auto;
@@ -99,7 +105,7 @@
 }
 
 .show-right form {
-  
+
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -134,7 +140,7 @@
 }
 
 .reviews {
- 
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -185,6 +191,8 @@
     gap: 1rem;
     height: fit-content;
     flex-direction: column;
+    margin-top: 0px;
+    padding-top: 15px;
   }
 
   .product-details img {

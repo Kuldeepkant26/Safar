@@ -26,6 +26,7 @@
     box-shadow: 19px 19px 86px #787878,
         -19px -19px 86px #ffffff;
     transition: transform 0.3s ease;
+    
 }
 
 .card:hover,
@@ -80,7 +81,7 @@
     display: flex;
     align-self: center;
     justify-content: center;
-    color: rgb(255, 255, 255);
+    color: rgb(102, 146, 242);
 }
 
 .card .location i {
@@ -95,7 +96,7 @@
         flex-wrap: wrap;
         align-items: center;
         padding: 0.2rem;
-        
+
         gap: 3vw;
         justify-content: space-evenly;
     }
@@ -119,7 +120,7 @@
             flex-wrap: wrap;
             align-items: center;
             padding: 0rem;
-            
+
             gap: 3vw;
             justify-content: space-evenly;
         }
