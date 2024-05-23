@@ -120,63 +120,63 @@ app.use((err, req, res, next) => {
     // res.status(statusCode).send(message);
 });
 
-// async function addData() {
-//     await Listings.insertMany([
-//         {
-//             title: "Seaside Oasis Lodge",
-//             image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-52960006/original/6e21b2e3-4a50-44f7-9641-dc9ae2e2ef4e.jpeg?im_w=720', filename: 'xyz' },
-//             price: 44000,
-//             location: 'Delhi',
-//             country: 'India',
-//             ctgry: 'Islands',
-//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
-//             owner: '664a46ed0b7746dcd647e026',
-//         },
-//         {
-//             title: "Azure Isle Retreat",
-//             image: { url: 'https://a0.muscache.com/im/pictures/monet/Luxury-54351340/original/fcfd79d3-778a-42bc-9cc3-11d82cf49205?im_w=720', filename: 'xyz' },
-//             price: 44000,
-//             location: 'Shanghai',
-//             country: 'China',
-//             ctgry: 'Islands',
-//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
-//             owner: '664a46ed0b7746dcd647e026',
-//         },
-//         {
-//             title: "Paradise Cove Inn",
-//             image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-853512929423214729/original/d2731d23-980b-4fc1-8ccc-926d0e3f4eed.jpeg?im_w=720', filename: 'xyz' },
-//             price: 8900,
-//             location: 'Espoo',
-//             country: 'FinLand',
-//             ctgry: 'Islands',
-//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
-//             owner: '664a46ed0b7746dcd647e026',
-//         },
+async function addData() {
+    await Listings.insertMany([
+        {
+            title: "Icicle Retreat",
+            image: { url: 'https://a0.muscache.com/im/pictures/201223a2-3881-44c9-add5-af5ad71aac65.jpg?im_w=720', filename: 'xyz' },
+            price: 44000,
+            location: 'Delhi',
+            country: 'India',
+            ctgry: 'Snow',
+            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+            owner: '664a46ed0b7746dcd647e026',
+        },
+        {
+            title: "Blizzard Bungalow",
+            image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-795129726304842162/original/f5a0bf8c-b58d-43b6-be04-94b3cad47aa6.jpeg?im_w=720', filename: 'xyz' },
+            price: 44000,
+            location: 'Shanghai',
+            country: 'China',
+            ctgry: 'Snow',
+            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+            owner: '664a46ed0b7746dcd647e026',
+        },
+        {
+            title: "Somerset cog",
+            image: { url: 'https://a0.muscache.com/im/pictures/5558e791-a541-4ad4-8475-bc0ad2cc9175.jpg?im_w=720', filename: 'xyz' },
+            price: 8900,
+            location: 'Espoo',
+            country: 'FinLand',
+            ctgry: 'Snow',
+            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+            owner: '664a46ed0b7746dcd647e026',
+        },
 
-//         {
-//             title: "Palm Breeze",
-//             image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-738879331663769852/original/d1f074a9-ed6c-4ffe-a3a6-b6c3578d205b.jpeg?im_w=720', filename: 'xyz' },
-//             price: 33000,
-//             location: 'California',
-//             country: 'Canada',
-//             ctgry: 'Islands',
-//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
-//             owner: '664a46ed0b7746dcd647e026',
-//         },
+        {
+            title: "Snowfall Suite",
+            image: { url: 'https://a0.muscache.com/im/pictures/825dd086-c1e0-4224-903d-5447991c8197.jpg?im_w=720', filename: 'xyz' },
+            price: 33000,
+            location: 'California',
+            country: 'Canada',
+            ctgry: 'Snow',
+            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+            owner: '664a46ed0b7746dcd647e026',
+        },
 
-//         {
-//             title: "Coral Bay Resort",
-//             image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-852441565106208849/original/35039868-f966-4cd6-b12a-d42612535dc2.jpeg?im_w=720', filename: 'xyz' },
-//             price: 55000,
-//             location: 'London',
-//             country: 'Usa',
-//             ctgry: 'Islands',
-//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
-//             owner: '664a46ed0b7746dcd647e026',
-//         }
+        {
+            title: "Frosty Haven",
+            image: { url: 'https://a0.muscache.com/im/pictures/fe9495e3-08e8-4d59-b81f-f59bde09dbcd.jpg?im_w=720', filename: 'xyz' },
+            price: 55000,
+            location: 'London',
+            country: 'Usa',
+            ctgry: 'Snow',
+            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+            owner: '664a46ed0b7746dcd647e026',
+        }
 
-//     ])
-// }
-// addData();
+    ])
+}
+addData();
 
 
