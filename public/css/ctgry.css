@@ -7,9 +7,21 @@
     gap: 0.7rem;
     overflow-x: scroll;
     margin-bottom: 0.5px;
-    padding: 0.4rem 1rem;
-    padding-left: 13rem;
+
     border-radius: 40px;
+}
+
+.ctgry::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width:750px) {
+    .ctgry {
+
+        padding: 0.4rem 1rem;
+        padding-left: 13rem;
+        border-radius: 40px;
+    }
 }
 
 .ctgry .box {

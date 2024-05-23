@@ -119,214 +119,63 @@ app.use((err, req, res, next) => {
     res.render('error.ejs', { statusCode, message });
     // res.status(statusCode).send(message);
 });
-// async function addData() {
-//     await Listings.insertMany([
-//         {
-//             title: "Ohio Rainy Retreat",
-//             image: { url: 'https://www.redfin.com/blog/wp-content/uploads/2023/09/GettyImages-108352226.jpg', filename: 'xyz' },
-//             price: 444,
-//             location: 'Ohio',
-//             country: 'FinLand',
-//             ctgry: 'Rainy',
-//             desc: 'Great place for rain lovers',
-//             owner:'664a46ed0b7746dcd647e026',
-//         },
-//         {
-//             title: "Ohio Rainy Retreat",
-//             image: { url: 'https://www.worldatlas.com/r/w768/upload/d3/ef/9d/shutterstock-148201862.jpg',filename:'xyz'},
-//             price: 444,
-//             location: 'Ohio',
-//             country: 'FinLand',
-//             ctgry: 'Rainy',
-//             desc: 'Great place for rain lovers',
-//             owner:'664a46ed0b7746dcd647e026',
-//         },
-//         {
-//             title: "Ohio Rainy Retreat",
-//             image: { url: 'https://nenow.in/wp-content/uploads/2023/06/the-splendid-munnar-kerala-during-monsoon.jpg',filename:'xyz'},
-//             price: 444,
-//             location: 'Ohio',
-//             country: 'FinLand',
-//             ctgry: 'Rainy',
-//             desc: 'Great place for rain lovers',
-//             owner:'664a46ed0b7746dcd647e026',
-//         },
+async function addData() {
+    await Listings.insertMany([
+        {
+            title: "Ohio Rainy Retreat",
+            image: { url: 'https://a0.muscache.com/im/pictures/26b7a4b6-facb-469f-9a53-b0a3edca7478.jpg?im_w=720', filename: 'xyz' },
+            price: 44000,
+            location: 'Bulandshahr',
+            country: 'India',
+            ctgry: 'Historic',
+            desc: 'Great place for rain lovers',
+            owner: '664a46ed0b7746dcd647e026',
+        },
+        {
+            title: "Ohio Rainy Retreat",
+            image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-644781343159260165/original/fe0cc648-57cc-4a37-97b9-ec6e30544669.jpeg?im_w=720', filename: 'xyz' },
+            price: 78000,
+            location: 'Hinoy',
+            country: 'Brazil',
+            ctgry: 'Historic',
+            desc: 'Great place for rain lovers',
+            owner: '664a46ed0b7746dcd647e026',
+        },
+        {
+            title: "Ohio Rainy Retreat",
+            image: { url: 'https://a0.muscache.com/im/pictures/84845790-71df-4e4a-a40d-a706e869d222.jpg?im_w=720', filename: 'xyz' },
+            price: 8900,
+            location: 'Ohio',
+            country: 'FinLand',
+            ctgry: 'Historic',
+            desc: 'Great place for rain lovers',
+            owner: '664a46ed0b7746dcd647e026',
+        },
 
-//         {
-//             title: "California Beach Escape",
-//             image: { url: 'https://www.backpacknxplore.com/wp-content/uploads/2019/06/agumbe-park-min.jpg',filename:'xyz'},
-//             price: 333,
-//             location: 'California',
-//             country: 'USA',
-//             ctgry: 'Beach',
-//             desc: 'Perfect getaway for beach enthusiasts',
-//             owner:'664a46ed0b7746dcd647e026',
-//         },
+        {
+            title: "California Beach Escape",
+            image: { url: 'https://a0.muscache.com/im/pictures/3531a462-20f4-401d-8a3b-c7ad15d071ce.jpg?im_w=720', filename: 'xyz' },
+            price: 333,
+            location: 'California',
+            country: 'Canada',
+            ctgry: 'Historic',
+            desc: 'Perfect getaway for beach enthusiasts',
+            owner: '664a46ed0b7746dcd647e026',
+        },
 
-//         {
-//             title: "London Birthday Celebration",
-//             image: { url: 'https://media.istockphoto.com/id/2149209960/photo/beautiful-background-for-photos-decor-of-the-place-for-photos.jpg?s=612x612&w=0&k=20&c=EmEO29CQ0B5rZVYebSLOn5Ocj9JwtQjiNw7GJNRBtRY=',filename:'xyz'},
-//             price: 555,
-//             location: 'London',
-//             country: 'UK',
-//             ctgry: 'Birthday',
-//             desc: 'Celebrate your special day in style',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Tokyo Rainy Sanctuary",
-//             image: { url: 'https://media.istockphoto.com/id/512754938/photo/milecastle-42-on-hadrians-wall.jpg?s=612x612&w=0&k=20&c=lujDChEsCjcEalvS9YkC73OqZ3vuICQ_-18xtaURaPo=',filename:'xyz'},
-//             price: 777,
-//             location: 'Tokyo',
-//             country: 'Japan',
-//             ctgry: 'Rainy',
-//             desc: 'Relax in the midst of soothing rain showers',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Sydney Beach Bliss",
-//             image: { url: 'https://static.toiimg.com/thumb/msid-104298293,width-748,height-499,resizemode=4,imgsize-118448/.jpg',filename:'xyz'},
-//             price: 888,
-//             location: 'Sydney',
-//             country: 'Australia',
-//             ctgry: 'Beach',
-//             desc: 'Enjoy sun, sand, and waves at the beach',
-//             owner:'664a46ed0b7746dcd647e026',
-//         },
-//         {
-//             title: "Sydney Beach Bliss",
-//             image: { url: 'https://www.travelandleisure.com/thmb/3_WqlhapMlbFfKZK4EmzFrGyfHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/palawan-CHEAPBEACH0120-f525a1e1febc4b18b6bb045cb50f8863.jpg',filename:'xyz'},
-//             price: 888,
-//             location: 'Sydney',
-//             country: 'Australia',
-//             ctgry: 'Beach',
-//             desc: 'Enjoy sun, sand, and waves at the beach',
-//             owner:'664a46ed0b7746dcd647e026',
-//         },
-//         {
-//             title: "Sydney Beach Bliss",
-//             image: { url: 'https://travel-blog.happyeasygo.com/wp-content/uploads/2019/01/Goa-950-x-600.jpg',filename:'xyz'},
-//             price: 888,
-//             location: 'Sydney',
-//             country: 'Australia',
-//             ctgry: 'Beach',
-//             desc: 'Enjoy sun, sand, and waves at the beach',
-//             owner:'664a46ed0b7746dcd647e026',
-//         },
-//         {
-//             title: "Sydney Beach Bliss",
-//             image: { url: 'https://static.wanderon.in/wp-content/uploads/2024/05/relaxing-beach-destinations.jpg',filename:'xyz'},
-//             price: 888,
-//             location: 'Sydney',
-//             country: 'Australia',
-//             ctgry: 'Beach',
-//             desc: 'Enjoy sun, sand, and waves at the beach',
-//             owner:'664a46ed0b7746dcd647e026',
-//         },
+        {
+            title: "London Birthday Celebration",
+            image: { url: 'https://a0.muscache.com/im/pictures/3531a462-20f4-401d-8a3b-c7ad15d071ce.jpg?im_w=720', filename: 'xyz' },
+            price: 55000,
+            location: 'London',
+            country: 'Usa',
+            ctgry: 'Historic',
+            desc: 'Celebrate your special day in style',
+            owner: '664a46ed0b7746dcd647e026',
+        }
 
-//         {
-//             title: "Paris Birthday Extravaganza",
-//             image: { url: 'https://media.istockphoto.com/id/1469403410/photo/delicious-desserts-on-the-candy-bar-in-pinks-color.jpg?s=612x612&w=0&k=20&c=cnbAPbaTGYodr2PRwh1R4tUdjevi-THZioxFcOGkEmE=',filename:'xyz'},
-//             price: 999,
-//             location: 'Paris',
-//             country: 'France',
-//             ctgry: 'Birthday',
-//             desc: 'Make your birthday unforgettable',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Paris Birthday Extravaganza",
-//             image: { url: 'https://media.istockphoto.com/id/1421042732/photo/birthday-holiday-event-for-children-with-decoration-in-a-unicorn.jpg?s=612x612&w=0&k=20&c=T5SA9xNLa_bl3_ergt3olBK5LZRfhe6i9rtn96QUBno=',filename:'xyz'},
-//             price: 999,
-//             location: 'Paris',
-//             country: 'France',
-//             ctgry: 'Birthday',
-//             desc: 'Make your birthday unforgettable',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Paris Birthday Extravaganza",
-//             image: { url: 'https://media.istockphoto.com/id/1358636622/photo/beautiful-christmas-decor-in-silvery-pink-tones-christmas-lights-and-toys-on-a-concrete.jpg?s=612x612&w=0&k=20&c=0R-ZqBJf8EKjkLQp2FJY0lchp1zmFd0c-qoWoYuUgJ0=',filename:'xyz'},
-//             price: 999,
-//             location: 'Paris',
-//             country: 'France',
-//             ctgry: 'Birthday',
-//             desc: 'Make your birthday unforgettable',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Athens Historic Adventure",
-//             image: { url: 'https://phgcdn.com/images/uploads/historichotels/package/HHA-hp-offers-Friends-of-HHA.jpg',filename:'xyz'},
-//             price: 111,
-//             location: 'Athens',
-//             country: 'Greece',
-//             ctgry: 'Historic',
-//             desc: 'Step back in time to ancient civilizations',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Athens Historic Adventure",
-//             image: { url: 'https://cdn.choosechicago.com/uploads/2019/05/Huber_Palmer_House_Lobby_2013_Adjusted_92b57941-89ae-4b6c-a2a3-a10b2efe068c-2400x1600.jpg',filename:'xyz'},
-//             price: 111,
-//             location: 'Athens',
-//             country: 'Greece',
-//             ctgry: 'Historic',
-//             desc: 'Step back in time to ancient civilizations',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Athens Historic Adventure",
-//             image: { url: 'https://digital.ihg.com/is/image/ihg/kimpton_london_1700x750',filename:'xyz'},
-//             price: 111,
-//             location: 'Athens',
-//             country: 'Greece',
-//             ctgry: 'Historic',
-//             desc: 'Step back in time to ancient civilizations',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Athens Historic Adventure",
-//             image: { url: 'https://phgcdn.com/images/uploads/JBKCC/masthead/JBKCC-masthead-claremontexterior.jpg',filename:'xyz'},
-//             price: 111,
-//             location: 'Athens',
-//             country: 'Greece',
-//             ctgry: 'Historic',
-//             desc: 'Step back in time to ancient civilizations',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Athens Historic Adventure",
-//             image: { url: 'https://phgcdn.com/images/uploads/WASWI/masthead/HHA-int-masthead-The-Willard-InterContinental.jpg',filename:'xyz'},
-//             price: 111,
-//             location: 'Athens',
-//             country: 'Greece',
-//             ctgry: 'Historic',
-//             desc: 'Step back in time to ancient civilizations',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-//         ,
-//         {
-//             title: "Vancouver Rainy Getaway",
-//             image: { url: 'https://media.istockphoto.com/id/578828950/photo/mithraic-temple-at-hadrians-wall-england.jpg?s=612x612&w=0&k=20&c=GXL7gWyOxu6O1aKttHpnfBTbvuZmBuzvbzrMJf4VAec=',filename:'xyz'},
-//             price: 222,
-//             location: 'Vancouver',
-//             country: 'Canada',
-//             ctgry: 'Rainy',
-//             desc: 'Embrace the serenity of rainy days',
-//             owner:'664a46ed0b7746dcd647e026',
-//         }
-
-//     ])
-// }
+    ])
+}
 // addData();
 
 
