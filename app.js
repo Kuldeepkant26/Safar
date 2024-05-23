@@ -119,63 +119,64 @@ app.use((err, req, res, next) => {
     res.render('error.ejs', { statusCode, message });
     // res.status(statusCode).send(message);
 });
-async function addData() {
-    await Listings.insertMany([
-        {
-            title: "Ohio Rainy Retreat",
-            image: { url: 'https://a0.muscache.com/im/pictures/26b7a4b6-facb-469f-9a53-b0a3edca7478.jpg?im_w=720', filename: 'xyz' },
-            price: 44000,
-            location: 'Bulandshahr',
-            country: 'India',
-            ctgry: 'Historic',
-            desc: 'Great place for rain lovers',
-            owner: '664a46ed0b7746dcd647e026',
-        },
-        {
-            title: "Ohio Rainy Retreat",
-            image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-644781343159260165/original/fe0cc648-57cc-4a37-97b9-ec6e30544669.jpeg?im_w=720', filename: 'xyz' },
-            price: 78000,
-            location: 'Hinoy',
-            country: 'Brazil',
-            ctgry: 'Historic',
-            desc: 'Great place for rain lovers',
-            owner: '664a46ed0b7746dcd647e026',
-        },
-        {
-            title: "Ohio Rainy Retreat",
-            image: { url: 'https://a0.muscache.com/im/pictures/84845790-71df-4e4a-a40d-a706e869d222.jpg?im_w=720', filename: 'xyz' },
-            price: 8900,
-            location: 'Ohio',
-            country: 'FinLand',
-            ctgry: 'Historic',
-            desc: 'Great place for rain lovers',
-            owner: '664a46ed0b7746dcd647e026',
-        },
 
-        {
-            title: "California Beach Escape",
-            image: { url: 'https://a0.muscache.com/im/pictures/3531a462-20f4-401d-8a3b-c7ad15d071ce.jpg?im_w=720', filename: 'xyz' },
-            price: 333,
-            location: 'California',
-            country: 'Canada',
-            ctgry: 'Historic',
-            desc: 'Perfect getaway for beach enthusiasts',
-            owner: '664a46ed0b7746dcd647e026',
-        },
+// async function addData() {
+//     await Listings.insertMany([
+//         {
+//             title: "Seaside Oasis Lodge",
+//             image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-52960006/original/6e21b2e3-4a50-44f7-9641-dc9ae2e2ef4e.jpeg?im_w=720', filename: 'xyz' },
+//             price: 44000,
+//             location: 'Delhi',
+//             country: 'India',
+//             ctgry: 'Islands',
+//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
+//             owner: '664a46ed0b7746dcd647e026',
+//         },
+//         {
+//             title: "Azure Isle Retreat",
+//             image: { url: 'https://a0.muscache.com/im/pictures/monet/Luxury-54351340/original/fcfd79d3-778a-42bc-9cc3-11d82cf49205?im_w=720', filename: 'xyz' },
+//             price: 44000,
+//             location: 'Shanghai',
+//             country: 'China',
+//             ctgry: 'Islands',
+//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
+//             owner: '664a46ed0b7746dcd647e026',
+//         },
+//         {
+//             title: "Paradise Cove Inn",
+//             image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-853512929423214729/original/d2731d23-980b-4fc1-8ccc-926d0e3f4eed.jpeg?im_w=720', filename: 'xyz' },
+//             price: 8900,
+//             location: 'Espoo',
+//             country: 'FinLand',
+//             ctgry: 'Islands',
+//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
+//             owner: '664a46ed0b7746dcd647e026',
+//         },
 
-        {
-            title: "London Birthday Celebration",
-            image: { url: 'https://a0.muscache.com/im/pictures/3531a462-20f4-401d-8a3b-c7ad15d071ce.jpg?im_w=720', filename: 'xyz' },
-            price: 55000,
-            location: 'London',
-            country: 'Usa',
-            ctgry: 'Historic',
-            desc: 'Celebrate your special day in style',
-            owner: '664a46ed0b7746dcd647e026',
-        }
+//         {
+//             title: "Palm Breeze",
+//             image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-738879331663769852/original/d1f074a9-ed6c-4ffe-a3a6-b6c3578d205b.jpeg?im_w=720', filename: 'xyz' },
+//             price: 33000,
+//             location: 'California',
+//             country: 'Canada',
+//             ctgry: 'Islands',
+//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
+//             owner: '664a46ed0b7746dcd647e026',
+//         },
 
-    ])
-}
+//         {
+//             title: "Coral Bay Resort",
+//             image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-852441565106208849/original/35039868-f966-4cd6-b12a-d42612535dc2.jpeg?im_w=720', filename: 'xyz' },
+//             price: 55000,
+//             location: 'London',
+//             country: 'Usa',
+//             ctgry: 'Islands',
+//             desc: 'Nestled amidst palm trees and azure waters, our hotel offers a blissful escape',
+//             owner: '664a46ed0b7746dcd647e026',
+//         }
+
+//     ])
+// }
 // addData();
 
 
