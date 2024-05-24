@@ -82,13 +82,14 @@
     align-self: center;
     justify-content: center;
     color: rgb(255, 255, 255);
-     border-radius: 10px;
+    border-radius: 10px;
+    background-color: #00000052;
+    padding: 0.5rem;
 }
 
 
 #location {
     color: rgb(255, 255, 255);
-    background-color: #00000052;
     border-radius: 10px;
     padding: 0px 5px;
     height: fit-content;
@@ -111,7 +112,7 @@
         justify-content: space-evenly;
     }
 
-    .cardCont   .card {
+    .cardCont .card {
         width: 191px;
         height: 267px;
         margin-bottom: 0.5rem;
@@ -135,7 +136,7 @@
             justify-content: space-evenly;
         }
 
-        .cardCont  .card {
+        .cardCont .card {
             width: 95vw;
             height: 267px;
             margin-bottom: 0.5rem;
@@ -147,14 +148,14 @@
             transition: transform 0.3s ease;
         }
 
-        .cardCont  .card .location {
+        .cardCont .card .location {
             position: absolute;
             bottom: -192px;
             right: 15px;
             display: flex;
             align-self: center;
             justify-content: center;
-           
+
         }
     }
 }
