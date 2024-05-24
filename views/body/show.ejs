@@ -130,5 +130,30 @@
                 </div>
             </div>
         </div>
+        <h2>Similar Places</h2>
+        <div class="similar">
+            <% for (list of listings){ %>
+                <a href="/show/<%= list._id %>">
+                    <div class="card">
+                        <img src="<%= list.image.url%>" alt="Image not found">
+                        <div class="cardinfo">
+                            <p>
+                                <%= list.title %>
+                            </p>
+                            <p class="price">&#8377;<%= list.price %>/ night</p>
+                            <p class="desc">
+                                <%= list.desc %>
+                            </p>
+                        </div>
+                        <div class="location">
+                            <i class="ri-map-pin-line"></i>
+                            <p id="location">
+                                <%= list.location %>, <%= list.country %>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <% }%>
+        </div>
         <script src="/js/show.js"></script>
     </body>

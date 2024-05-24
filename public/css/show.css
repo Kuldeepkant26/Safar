@@ -262,3 +262,56 @@
   border-radius: 15px;
 
 }
+
+h2{
+  text-align: center;
+}
+.similar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  
+  gap: 1rem;
+  padding: 2rem 1rem;
+  margin: 1rem 0rem;
+}
+.similar a{
+  text-decoration: none;
+  color: rgb(59, 56, 56);
+}
+.similar  .location{
+   top: 10px;
+}
+
+
+.similar::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the vertical scrollbar */
+  height: 10px;
+  /* Height of the horizontal scrollbar */
+}
+
+.similar::-webkit-scrollbar-track {
+  background-color: #d2d0d0;
+  /* Color of the scrollbar track */
+  border-radius: 10px;
+  /* Optional: rounded corners for the track */
+}
+
+.similar::-webkit-scrollbar-thumb {
+  background-color: black;
+  /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  /* Optional: rounded corners for the thumb */
+}
+
+.similar::-webkit-scrollbar-thumb:hover {
+  background-color: #555555;
+  /* Color of the thumb when hovered */
+}
+
+.similar::-webkit-scrollbar-thumb:active {
+  background-color: #333;
+  /* Color of the thumb when clicked */
+}

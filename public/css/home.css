@@ -111,7 +111,7 @@
         justify-content: space-evenly;
     }
 
-    .card {
+    .cardCont   .card {
         width: 191px;
         height: 267px;
         margin-bottom: 0.5rem;
@@ -135,7 +135,7 @@
             justify-content: space-evenly;
         }
 
-        .card {
+        .cardCont  .card {
             width: 95vw;
             height: 267px;
             margin-bottom: 0.5rem;
@@ -147,7 +147,7 @@
             transition: transform 0.3s ease;
         }
 
-        .card .location {
+        .cardCont  .card .location {
             position: absolute;
             bottom: -192px;
             right: 15px;

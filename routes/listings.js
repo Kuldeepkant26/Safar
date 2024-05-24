@@ -51,7 +51,8 @@ router.post('/add', isLogedIn, upload.single('image'), WrapAsync(async (req, res
 }));
 router.get('/show/:id', WrapAsync(async (req, res) => {
     let listing = await Listings.findById(req.params.id).populate({ path: "reviews", populate: { path: "author" } }).populate("owner");
-    res.render('show.ejs', { listing });
+    let listings = await Listings.find({ ctgry: listing.ctgry });
+    res.render('show.ejs', { listing, listings });
 
 }))
 router.get('/testx/:ct', WrapAsync(async (req, res) => {
