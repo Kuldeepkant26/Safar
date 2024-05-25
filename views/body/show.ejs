@@ -36,8 +36,12 @@
                     <select name="ctgry" id="ctgry">
                         <option value="Historic" <%=listing.ctgry==='Historic' ? 'selected' : '' %>>Historic</option>
                         <option value="Beach" <%=listing.ctgry==='Beach' ? 'selected' : '' %>>Beach</option>
-                        <option value="Birthday" <%=listing.ctgry==='Birthday' ? 'selected' : '' %>>Birthday</option>
-                        <option value="Rainy" <%=listing.ctgry==='Rainy' ? 'selected' : '' %>>Rainy</option>
+                        <option value="Boats" <%=listing.ctgry==='Boats' ? 'selected' : '' %>>Boats</option>
+                        <option value="Camping" <%=listing.ctgry==='Camping' ? 'selected' : '' %>>Camping</option>
+                        <option value="Islands" <%=listing.ctgry==='Islands' ? 'selected' : '' %>>Islands</option>
+                        <option value="Mansion" <%=listing.ctgry==='Mansion' ? 'selected' : '' %>>Mansion</option>
+                        <option value="Rooms" <%=listing.ctgry==='Rooms' ? 'selected' : '' %>>Room</option>
+                        <option value="Snow"<%=listing.ctgry==='Snow' ? 'selected' : '' %>>Snow</option>
                     </select>
                     <h3>Category</h3>
                 </div>
@@ -115,7 +119,7 @@
                             <p class="user"><i class="ri-user-fill"></i>
                                 <%= review.author.username %>
                             </p>
-                            <p class="starability-result" data-rating="<%= review.rating %>">
+                            <p class="starability-result" data-rating= "<%= review.rating %>">
                                 Rated: 3 stars
                             </p>
                             </p>
