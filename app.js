@@ -120,63 +120,63 @@ app.use((err, req, res, next) => {
     // res.status(statusCode).send(message);
 });
 
-async function addData() {
-    await Listings.insertMany([
-        {
-            title: "Icicle Retreat",
-            image: { url: 'https://a0.muscache.com/im/pictures/201223a2-3881-44c9-add5-af5ad71aac65.jpg?im_w=720', filename: 'xyz' },
-            price: 44000,
-            location: 'Delhi',
-            country: 'India',
-            ctgry: 'Snow',
-            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
-            owner: '664a46ed0b7746dcd647e026',
-        },
-        {
-            title: "Blizzard Bungalow",
-            image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-795129726304842162/original/f5a0bf8c-b58d-43b6-be04-94b3cad47aa6.jpeg?im_w=720', filename: 'xyz' },
-            price: 44000,
-            location: 'Shanghai',
-            country: 'China',
-            ctgry: 'Snow',
-            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
-            owner: '664a46ed0b7746dcd647e026',
-        },
-        {
-            title: "Somerset cog",
-            image: { url: 'https://a0.muscache.com/im/pictures/5558e791-a541-4ad4-8475-bc0ad2cc9175.jpg?im_w=720', filename: 'xyz' },
-            price: 8900,
-            location: 'Espoo',
-            country: 'FinLand',
-            ctgry: 'Snow',
-            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
-            owner: '664a46ed0b7746dcd647e026',
-        },
+// async function addData() {
+//     await Listings.insertMany([
+//         {
+//             title: "Icicle Retreat",
+//             image: { url: 'https://a0.muscache.com/im/pictures/201223a2-3881-44c9-add5-af5ad71aac65.jpg?im_w=720', filename: 'xyz' },
+//             price: 44000,
+//             location: 'Delhi',
+//             country: 'India',
+//             ctgry: 'Snow',
+//             desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+//             owner: '664a46ed0b7746dcd647e026',
+//         },
+//         {
+//             title: "Blizzard Bungalow",
+//             image: { url: 'https://a0.muscache.com/im/pictures/miso/Hosting-795129726304842162/original/f5a0bf8c-b58d-43b6-be04-94b3cad47aa6.jpeg?im_w=720', filename: 'xyz' },
+//             price: 44000,
+//             location: 'Shanghai',
+//             country: 'China',
+//             ctgry: 'Snow',
+//             desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+//             owner: '664a46ed0b7746dcd647e026',
+//         },
+//         {
+//             title: "Somerset cog",
+//             image: { url: 'https://a0.muscache.com/im/pictures/5558e791-a541-4ad4-8475-bc0ad2cc9175.jpg?im_w=720', filename: 'xyz' },
+//             price: 8900,
+//             location: 'Espoo',
+//             country: 'FinLand',
+//             ctgry: 'Snow',
+//             desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+//             owner: '664a46ed0b7746dcd647e026',
+//         },
 
-        {
-            title: "Snowfall Suite",
-            image: { url: 'https://a0.muscache.com/im/pictures/825dd086-c1e0-4224-903d-5447991c8197.jpg?im_w=720', filename: 'xyz' },
-            price: 33000,
-            location: 'California',
-            country: 'Canada',
-            ctgry: 'Snow',
-            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
-            owner: '664a46ed0b7746dcd647e026',
-        },
+//         {
+//             title: "Snowfall Suite",
+//             image: { url: 'https://a0.muscache.com/im/pictures/825dd086-c1e0-4224-903d-5447991c8197.jpg?im_w=720', filename: 'xyz' },
+//             price: 33000,
+//             location: 'California',
+//             country: 'Canada',
+//             ctgry: 'Snow',
+//             desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+//             owner: '664a46ed0b7746dcd647e026',
+//         },
 
-        {
-            title: "Frosty Haven",
-            image: { url: 'https://a0.muscache.com/im/pictures/fe9495e3-08e8-4d59-b81f-f59bde09dbcd.jpg?im_w=720', filename: 'xyz' },
-            price: 55000,
-            location: 'London',
-            country: 'Usa',
-            ctgry: 'Snow',
-            desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
-            owner: '664a46ed0b7746dcd647e026',
-        }
+//         {
+//             title: "Frosty Haven",
+//             image: { url: 'https://a0.muscache.com/im/pictures/fe9495e3-08e8-4d59-b81f-f59bde09dbcd.jpg?im_w=720', filename: 'xyz' },
+//             price: 55000,
+//             location: 'London',
+//             country: 'Usa',
+//             ctgry: 'Snow',
+//             desc: 'This cozy room offers a breathtaking view of the falling snow through its large bay windows.',
+//             owner: '664a46ed0b7746dcd647e026',
+//         }
 
-    ])
-}
-addData();
+//     ])
+// }
+// addData();
 
 
