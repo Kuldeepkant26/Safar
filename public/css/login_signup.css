@@ -23,6 +23,9 @@
     width: 380px;
     border-radius: 15px;
     margin-bottom: 2.2rem;
+    padding-top: 2rem;
+    position: relative;
+    top: 3rem;
 }
 
 .loginSignup .lup {
