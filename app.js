@@ -50,7 +50,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views/body'));
 
 app.use(express.urlencoded({ extended: true }));//to access the data inside request
-app.use(express.static(path.join(__dirname, '/public'))); //to serve static files like css, js
+app.use(express.static(path.join(__dirname, '/public'))); //to serve static files like css, js 
 
 app.engine('ejs', ejsmate);
 

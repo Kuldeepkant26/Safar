@@ -41,7 +41,7 @@
                         <option value="Islands" <%=listing.ctgry==='Islands' ? 'selected' : '' %>>Islands</option>
                         <option value="Mansion" <%=listing.ctgry==='Mansion' ? 'selected' : '' %>>Mansion</option>
                         <option value="Rooms" <%=listing.ctgry==='Rooms' ? 'selected' : '' %>>Room</option>
-                        <option value="Snow"<%=listing.ctgry==='Snow' ? 'selected' : '' %>>Snow</option>
+                        <option value="Snow" <%=listing.ctgry==='Snow' ? 'selected' : '' %>>Snow</option>
                     </select>
                     <h3>Category</h3>
                 </div>
@@ -93,7 +93,6 @@
                         <% } %>
                 </div>
 
-
                 <form class="reviewForm" method="post" action="/review/<%= listing._id %>">
                     <fieldset class="starability-slot">
                         <legend>Leave a review:</legend>
@@ -119,7 +118,7 @@
                             <p class="user"><i class="ri-user-fill"></i>
                                 <%= review.author.username %>
                             </p>
-                            <p class="starability-result" data-rating= "<%= review.rating %>">
+                            <p class="starability-result" data-rating="<%= review.rating %>">
                                 Rated: 3 stars
                             </p>
                             </p>
@@ -144,14 +143,12 @@
                             <p>
                                 <%= list.title %>
                             </p>
-                            <p class="price">&#8377;<%= list.price %>/ night</p>
-                            <p class="desc">
-                                <%= list.desc %>
-                            </p>
+                            <p class="price">&#8377;<%= list.price %>/night</p>
+
                         </div>
                         <div class="location">
                             <i class="ri-map-pin-line"></i>
-                            <p id="location">
+                            <p>
                                 <%= list.location %>, <%= list.country %>
                             </p>
                         </div>

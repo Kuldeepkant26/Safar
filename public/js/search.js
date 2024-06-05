@@ -47,7 +47,6 @@ function createCard(listing) {
 
   const title = createElementWithText('p', listing.title);
   const price = createElementWithText('p', `₹${listing.price}/ night`, 'price');
-  const description = createElementWithText('p', listing.desc, 'desc');
 
   const location = document.createElement('div');
   location.classList.add('location');
@@ -62,7 +61,7 @@ function createCard(listing) {
 
   cardInfo.appendChild(title);
   cardInfo.appendChild(price);
-  cardInfo.appendChild(description);
+
 
   link.appendChild(image);
   link.appendChild(cardInfo);

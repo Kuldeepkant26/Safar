@@ -12,171 +12,61 @@
 
 .cardCont a {
     text-decoration: none;
-    color: black;
-    font-family: 'General Sans';
 }
 
-.card {
-    width: 220px;
-    height: 270px;
-    overflow-y: hidden;
-    position: relative;
-    border-radius: 13px;
+.cardCont .card {
+    width: 240px;
+    height: 240px;
+    border-radius: 18px;
     background: #ffffff;
-    box-shadow: 19px 19px 86px #787878,
-        -19px -19px 86px #ffffff;
-    transition: transform 0.3s ease;
-
+    box-shadow: 20px 20px 60px #d9d9d9,
+        -20px -20px 60px #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    outline: none;
+    position: relative;
+    transition: all;
+    transition-duration: 0.3s;
 }
 
-.card:hover,
-.card:active {
-    transform: scale(0.98);
-}
-
-.card img {
+.cardCont .card img {
     width: 100%;
     height: 76%;
     object-fit: cover;
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
+
 }
 
-.card .cardinfo {
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding: 0 0.5rem;
+
+.cardCont .card .cardinfo {
+
+    margin: 0.1rem 0.3rem;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.cardCont .card .location {
     position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 215px;
-    transition: all;
-    transition-duration: 0.7s;
-    backdrop-filter: blur(40px);
-    /* Apply backdrop blur effect */
-    -webkit-backdrop-filter: blur(30px);
-    width: 100%;
-}
 
-.card .cardinfo .price {
-    color: green;
-
-}
-
-.card:hover .cardinfo {
-    top: 114px;
-
-}
-
-.card .cardinfo p {
-    margin-top: 4px;
-}
-
-.card .location {
-    position: absolute;
-    top: 7px;
-    right: 10px;
+    top: 63%;
+    right: 0.19rem;
     display: flex;
-    align-self: center;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-    background-color: #00000052;
-    padding: 0.5rem;
-    height: fit-content;
-}
-
-
-#location {
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 0px 5px;
-    height: fit-content;
-}
-
-.card .location i {
-
-    color: rgb(69, 146, 197);
-}
-
-@media (max-width:600px) {
-    .cardCont {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: 0.2rem;
-
-        gap: 3vw;
-        justify-content: space-evenly;
-    }
-
-    .cardCont .card {
-        width: 191px;
-        height: 267px;
-        margin-bottom: 0.5rem;
-        overflow-y: hidden;
-        position: relative;
-        border-radius: 13px;
-        background: #ffffff;
-        box-shadow: 0px 9px 9px 0px #787878, -19px -19px 86px #ffffff;
-        transition: transform 0.3s ease;
-    }
-
-    @media (max-width:400px) {
-        .cardCont {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            padding: 0rem;
-
-            gap: 3vw;
-            justify-content: space-evenly;
-        }
-
-        .cardCont .card {
-            width: 95vw;
-            height: 267px;
-            margin-bottom: 0.5rem;
-            overflow-y: hidden;
-            position: relative;
-            border-radius: 13px;
-            background: #ffffff;
-            box-shadow: 0px 9px 9px 0px #787878, -19px -19px 86px #ffffff;
-            transition: transform 0.3s ease;
-        }
-
-        .cardCont .card .location {
-            position: absolute;
-            bottom: -192px;
-            right: 15px;
-            display: flex;
-            align-self: center;
-            justify-content: center;
-
-        }
-    }
-}
-
-
-
-.card .cardinfo .price {
-    color: rgb(68, 204, 68);
-    font-size: 1rem;
-}
-
-.ebox {
-    border: 1px solid red;
-    color: rgb(211, 25, 25);
-    background-color: black;
-    width: 390px;
-    height: 300px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    color: white;
+    padding: 0.3rem;
+    border-radius: 10px;
+    font-size: 0.65rem;
+    gap: 0.1rem;
+}
+
+.cardCont .card .location i {
+    color: rgb(162, 154, 235);
+}
+
+@media (min-width:1000px) {
+    .cardCont .card:hover {
+        transform: scale(1.1);
+
+    }
 }
