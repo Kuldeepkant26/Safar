@@ -35,7 +35,6 @@ router.post('/add', isLogedIn, upload.single('image'), WrapAsync(async (req, res
     let filename = req.file.filename;
     let { title, price, desc, location, country, ctgry, image } = req.body;
     let l1 = new Listings({
-
         title: capitalizeFirstLetter(title),
         price: price,
         desc: capitalizeFirstLetter(desc),

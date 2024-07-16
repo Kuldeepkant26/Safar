@@ -37,8 +37,8 @@
 }
 
 
-.cardCont .card .cardinfo {
 
+.cardCont .card .cardinfo {
     margin: 0.1rem 0.3rem;
     color: black;
     font-size: 0.8rem;
@@ -46,7 +46,6 @@
 
 .cardCont .card .location {
     position: absolute;
-
     top: 63%;
     right: 0.19rem;
     display: flex;
