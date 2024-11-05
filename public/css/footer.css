@@ -3,6 +3,7 @@ footer {
     color: #fff;
     padding: 40px 0;
     font-family: Arial, sans-serif;
+    position: relative;
 }
 
 .footer-container {
@@ -111,9 +112,12 @@ footer {
 
 .footer-bottom {
     background-color: #111;
+    width: 100%;
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;
+    position: absolute;
+    bottom: 0px;
 }
 
 .footer-bottom p {

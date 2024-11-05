@@ -2,15 +2,20 @@ if (process.env.NODE_ENV != 'production') {
     require('dotenv').config()
 }
 
+
 const express = require('express');
 const app = express();
 const path = require('path');
 const port = 3000;
-const Listings = require('./models/listings');
-const Reviews = require('./models/reviews');
+
+const mongoose = require('mongoose');// connection schema model 
+
+const Listings = require('./models/listings'); //Model is a class by which we manipulate the data of a specific collection
+const Reviews = require('./models/reviews'); 
 const User = require('./models/user');
-const ejsmate = require('ejs-mate');
-const mongoose = require('mongoose');
+
+const ejsmate = require('ejs-mate'); 
+
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
@@ -50,7 +55,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views/body'));
 
 app.use(express.urlencoded({ extended: true }));//to access the data inside request
-app.use(express.static(path.join(__dirname, '/public'))); //to serve static files like css, js 
+app.use(express.static(path.join(__dirname, '/public'))); //to serve static files like css, js ,images
 
 app.engine('ejs', ejsmate);
 
@@ -72,9 +77,9 @@ const sopt = {
     resave: false,
     saveUninitialized: true,
     cookie: {
-        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
-        maxAge: 7 * 24 * 60 * 60 * 1000,
-        httpOnly: true //To prevent cross scripting attacks
+        expires: Date.now() + 7 * 24 * 60 * 60 * 1000,  
+        maxAge: 7 * 24 * 60 * 60 * 1000,              
+        httpOnly: true //To prevent cross scripting attacks  
     },
 };
 
@@ -85,13 +90,14 @@ app.use(flash())
 
 app.use(passport.initialize());
 app.use(passport.session());
+
 passport.use(new LocalStrategy(User.authenticate()))
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
 app.use((req, res, next) => {
-
+  
     res.locals.error = req.flash("error");
     res.locals.success = req.flash('success');
     res.locals.currUser = req.user;

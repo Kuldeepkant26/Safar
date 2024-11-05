@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Document</title>
+    <title>Safar(Hotel managment platform)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,6 +70,7 @@
 
 <body>
     <%- include('../includes/nav.ejs') %>
+
         <div id="login" class="loginSignup">
             <form action="/login" method="post" autocomplete="off">
                 <div class="lup">
@@ -84,6 +85,7 @@
                 </div>
             </form>
         </div>
+
         <div id="signup" class="loginSignup">
             <form action="/signup" method="post" autocomplete="off">
                 <div class="lup">
@@ -100,14 +102,19 @@
                 </div>
             </form>
         </div>
+
         <% if(success && success.length || error && error.length){ %>
             <div id="success-message" class="success-message">
                 <%= success %>
                     <%= error %>
             </div>
             <% } %>
+            
                 <%- body %>
+
                     <%- include('../includes/footer.ejs') %>
+
+
                         <script src="/js/loginSignup.js"></script>
                         <script src="/js/nav.js"></script>
                         <script> document.addEventListener("DOMContentLoaded", function () {
